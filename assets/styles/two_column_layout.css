@@ -1,0 +1,33 @@
+.two-col-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.two-col-layout > .main {
+    width: 60%;
+}
+
+.two-col-layout > .aside {
+    width: 40%; /* Öka från t.ex. 30% */
+}
+.aside {
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 24px;
+}
+
+.aside a{
+    text-decoration: none;
+    font-family: "Raleway", serif;
+    font-size: 1.6rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 24px;
+}
+
+.aside a:hover {
+    text-decoration: underline;
+}

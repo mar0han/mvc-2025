@@ -1,0 +1,12 @@
+img {
+    width: 400px;
+}
+
+.image-container {
+    display: inline-block;
+}
+
+.text-container {
+    flex: 1;
+    padding: 10px;
+}

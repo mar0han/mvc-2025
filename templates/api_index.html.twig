@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}API Översikt{% endblock %}
+
+{% block body %}
+    <div class="main text-center">
+        <h2>Tillgängliga JSON API:n</h2>
+        <ul>
+            <li>
+                <strong>Citat:</strong>
+                <a href="{{ path('api_quote') }}" target="_blank">/api/quote</a>
+                <br>
+            </li>
+        </ul>
+    </div>
+{% endblock %}

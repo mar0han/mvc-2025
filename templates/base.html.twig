@@ -14,16 +14,17 @@
         {% endblock %}
     </head>
     <body>
-        <header class="site-header" style="background-image: url({{ asset('img/background.jpg') }})">
-            <span class="site-title">My Symfony Site</span>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="{{ path('home') }}">Home</a></li>
-                <li><a href="{{ path('about') }}">About</a></li>
-                <li><a href="{{ path('lucky_number') }}">Lucky number</a></li>
-            </ul>
+        <nav class="nav">
+                <a href="{{ path('home') }}">Home</a>
+                <a href="{{ path('report') }}">Redovisning</a>
+                <a href="{{ path('lucky') }}">Lucky</a></li>
+                <a href="{{ path('api_index') }}">API:n</a>
+                <a href="{{ path('about') }}">About</a>
         </nav>
         {% block body %}{% endblock %}
+
     </body>
+    <footer>
+        <p>©2025 mahq24 - All rights reserved.</p>
+    </footer>
 </html>

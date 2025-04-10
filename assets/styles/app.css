@@ -1,19 +1,109 @@
-body {
-    background-color: skyblue;
-    margin: 0 auto;
-    max-width: 800px;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import "image.css";
+@import "lucky.css";
+@import "two_column_layout.css";
+
+html {
+    font-size: 100%;
+    height: 100%;
+    margin: 0;
 }
 
 body {
-    background: url('../images/background.jpg');
-    background-size: cover;
-}
-
-header {
-    height: 150px;
-    width: 800px;
+    background-color: #FBF4EC;
+    line-height: 1.4;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 h1 {
-    border-bottom: 4px double #2b2b2b;
+    font-size: 2.4rem;
+    margin-bottom: 1.68rem;
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    color: #3E342E;
+}
+
+h2 {
+    font-size: 1.8rem;
+    font-family: "Oswald", serif;
+    font-weight: 400;
+    color: #3E342E;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.68rem;
+    font-family: "Raleway", serif;
+    color: #3E342E;
+}
+
+a {
+    text-decoration: none;
+    font-family: "Raleway", serif;
+    color: #6B705C
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+li {
+    font-size: 1.2rem;
+    font-family: "Raleway", serif;
+    color: #3E342E;
+}
+
+.text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 16px;
+}
+
+.main {
+    margin: 16px auto;
+    width: 96%;
+    max-width: 1200px;
+    padding: 16px;
+    border-radius: 4px;
+    background-color: #FBF4EC;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 1.68rem;
+    padding: 16px;
+}
+
+.nav a {
+    text-decoration: none;
+    font-family: "Raleway", serif;
+    color: #3E342E;
+    font-size: 1.6rem;
+}
+
+.nav a:hover {
+    color:#CDCEBE;
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: nowrap;
+}
+
+footer {
+    margin-top: auto;
+    background-color: #848176;
+    padding: 10px;
+    text-align: center;
 }

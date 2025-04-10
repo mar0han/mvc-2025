@@ -2,14 +2,15 @@
 
 namespace App\Controller;
 
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class LuckyControllerJson
+class LuckyControllerJson extends AbstractController
 {
-    #[Route("/api/lucky/number")]
-    public function jsonNumber(): Response
+    #[Route("/api/lucky/number", name: "api_lucky_number")]
+    public function jsonNumber(): JsonResponse
     {
         $number = random_int(0, 100);
 
@@ -18,13 +19,11 @@ class LuckyControllerJson
             'lucky-message' => 'Hi MEGA there!',
         ];
 
-          // return new JsonResponse($data);
+        $response = new JsonResponse($data);
+        $response->setEncodingOptions(
+            $response->getEncodingOptions() | JSON_PRETTY_PRINT
+        );
 
-          $response = new JsonResponse($data);
-          $response->setEncodingOptions(
-              $response->getEncodingOptions() | JSON_PRETTY_PRINT
-          );
-          return $response;
+        return $response;
     }
-
 }
