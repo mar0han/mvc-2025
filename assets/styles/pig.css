@@ -1,0 +1,26 @@
+.die {
+    font-size: 3em;
+}
+
+.flash-notice {
+    padding: 0.5em;
+    color: #393d30;
+    background-color: #CDCEBE;
+    border-color: #CDCEBE;
+    font-family: "Raleway", serif;
+}
+.flash-notice:before {
+    content: "ⓘ";
+}
+
+.flash-warning {
+    padding: 0.5em;
+    color: #3E342E;
+    background-color: #fce8be;
+    border-color: #fce8be;
+    font-family: "Raleway", serif;
+}
+.flash-warning:before {
+    content: "⚠";
+    color: #3E342E;
+}

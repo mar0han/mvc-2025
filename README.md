@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ![image](public/img/gitreadme.png)
 
 Objektorienterade webbteknologier - MVC - 2025
@@ -24,4 +23,4 @@ Därefter gå till me/report och kör denna kod:
 composer install
 npm install
 symfony server:start
-=======
+
