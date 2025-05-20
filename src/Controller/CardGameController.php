@@ -39,6 +39,9 @@ class CardGameController extends AbstractController
         // save deck to session
         $session->set("card_deck", $deck);
 
+        // clear previously drawn hand
+        $session->remove("drawn_hand");
+
         return $this->render('card/deck.html.twig', [
             // show shuffled cards
             'cards' => $deck->getCards(),
@@ -87,10 +90,19 @@ class CardGameController extends AbstractController
             $session->set("card_deck", $deck);
         }
 
-        // show draw form
+        $drawnHand = $session->get("drawn_hand");
+
+        // always draw one card
+        $drawnCards = $deck->draw(1);
+        $drawnHand = new CardHand($drawnCards);
+
+        // save updated deck and hand in session
+        $session->set("card_deck", $deck);
+        $session->set("drawn_hand", $drawnHand);
+
         return $this->render('card/draw.html.twig', [
-            'cards' => [],
-            'drawNumber' => 0,
+            'cards' => $drawnHand->getCards(),
+            'drawNumber' => $drawnHand->count(),
             'remaining' => $deck->count(),
         ]);
     }
