@@ -1,0 +1,39 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Card Game{% endblock %}
+
+{% block body %}
+    <div class="main">
+        <div class="text-container-center">
+            <a href="{{ path('card_deck') }}">Kortlek</a>
+            ✦ <a href="{{ path('card_draw_get') }}">Dra kort</a>
+            ✦ <a href="{{ path('card_shuffle') }}">Blanda kortlek</a> 
+        </div>
+        <div class="text-center">
+            <h1>Kortspel</h1>
+        </div>
+        
+        
+        <div class="container">
+            <div class="image-container">
+                <img src="{{ asset('build/images/CardGameUML.drawio.png') }}" alt="">
+            </div>
+
+            <div class="text-container">
+                <h2>Struktur</h2>
+
+                <p><strong>Card</strong> är en klass som beskriver ett kort, den sparar svit (symbol) och värde och den har funktioner för att hämta dessa.</p>
+
+                <p><strong>CardGraphic</strong> ärver <strong>Card</strong>. Den använder svit och värde från <strong>Card</strong>, men lägger till egna funktioner som visar hur kortet ser ut (🂡, 🃎 osv.).</p>
+
+                <p>
+                    <strong>CardHand</strong> håller flera kort. Den kan lägga till kort, hämta alla kort och räkna hur många det är.
+                </p>
+
+                <p>
+                    <strong>Deck</strong> skapar en kortlek med 52 kort. Den kan blanda korten, dra ett eller flera kort och visa hur många som är kvar.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -5,11 +5,26 @@
 {% block body %}
     <div class="main text-center">
         <h2>Tillgängliga JSON API:n</h2>
-        <ul>
+        <ul style="list-style-type: none; padding-left: 0;">
             <li>
                 <strong>Citat:</strong>
-                <a href="{{ path('api_quote') }}" target="_blank">/api/quote</a>
-                <br>
+                <a href="{{ path('api_quote') }}" class="button-link" target="_blank">/api/quote</a>
+            </li>
+            <li>
+                <strong>Visa kortlek:</strong>
+                <a href="{{ path('deck_api') }}" class="button-link" target="_blank">/api/deck</a>
+            </li>
+            <li>
+                <strong>Blanda kortlek:</strong>
+                <a href="{{ path('shuffle_api') }}" class="button-link" target="_blank">/api/deck/shuffle</a>
+            </li>
+            <li>
+                <strong>Dra ett kort:</strong>
+                <a href="{{ path('draw_one_api') }}" class="button-link" target="_blank">/api/deck/draw</a>
+            </li>
+            <li>
+                <strong>Dra flera kort:</strong>
+                <a href="{{ path('draw_number_api', {'number': 5}) }}" class="button-link" target="_blank">/api/deck/draw/5</a>
             </li>
         </ul>
     </div>

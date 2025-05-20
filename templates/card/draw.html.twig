@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Dra kort{% endblock %}
+
+{% block body %}
+  <div class="main">
+
+    <div class="text-container-center">
+      <a href="{{ path('card_deck') }}">Kortlek</a>
+      ✦ <a href="{{ path('card_draw_get') }}">Dra kort</a>
+      ✦ <a href="{{ path('card_shuffle') }}">Blanda kortlek</a> 
+    </div>
+
+    <h1>Dra kort</h1>
+
+    {% if remaining > 0 %}
+      <form method="post" action="{{ path('card_draw_post') }}">
+          <label for="number">Antal kort att dra:</label>
+          <input type="number" name="number" id="number" min="1" max="{{ remaining }}" value="1" required>
+          <button type="submit">Dra kort</button>
+      </form>
+    {% else %}
+      <p>Slut på kort, blanda kortleken för att spela igen.</p>
+    {% endif %}
+
+    <div class="card">
+      {% if cards is not empty %}
+          <p><b>Du drog {{ drawNumber }} kort.</b><br>
+          {{ remaining }} kort kvar i kortleken.</p>
+          <div class="card-container">
+              {% for card in cards %}
+                  <span class="card">{{ card.getAsString() }}</span>
+              {% endfor %}
+          </div>
+      {% else %}
+          <p>Du har inte dragit några kort än.</p>
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}

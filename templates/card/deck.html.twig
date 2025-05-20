@@ -1,0 +1,27 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Cards{% endblock %}
+
+{% block body %}
+    <div class="main">
+        <div class="text-container-center">
+            <a href="{{ path('card_deck') }}">Kortlek</a>
+            ✦ <a href="{{ path('card_draw_get') }}">Dra kort</a>
+            ✦ <a href="{{ path('card_shuffle') }}">Blanda kortlek</a> 
+        </div>
+        
+        <div class="text-center">
+            <h1>Kortlek</h1>
+        </div>
+        
+        {% if shuffled is defined and shuffled %}
+            <p>Kortleken är nu blandad!</p>
+        {% endif %}
+         
+        <div class="card-container">
+            {% for card in cards %}
+                <span class="card">{{ card.getAsString() }}</span>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

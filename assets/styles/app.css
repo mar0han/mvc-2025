@@ -3,6 +3,7 @@
 @import "lucky.css";
 @import "two_column_layout.css";
 @import "pig.css";
+@import "cards.css";
 
 html {
     font-size: 100%;
@@ -56,6 +57,12 @@ li {
     color: #3E342E;
 }
 
+label {
+    font-size: 1.2rem;
+    font-family: "Raleway", serif;
+    color: #3E342E; 
+}
+
 .text-center {
     display: flex;
     flex-direction: column;
@@ -100,6 +107,43 @@ li {
     gap: 20px;
     padding: 20px;
     flex-wrap: nowrap;
+}
+
+button {
+    font-family: "Raleway", serif;
+    font-weight: bold;
+    background-color: #848176;
+    color: #FBF4EC;
+    padding: 0.5em 1em;
+    margin-top: 1.4rem;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C9C8B9;
+    color: #3E342E;
+}
+
+.button-link {
+    font-family: "Raleway", serif;
+    font-weight: bold;
+    background-color: #848176;
+    color: #FBF4EC;
+    padding: 0.5em 1em;
+    margin-top: 1.4rem;
+    border-radius: 4px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: #C9C8B9;
+    color: #3E342E;
 }
 
 footer {

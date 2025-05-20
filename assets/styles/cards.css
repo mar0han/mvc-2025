@@ -1,0 +1,28 @@
+.card {
+    font-size: 8rem;
+    display: inline-block;
+    margin: 0 0.3rem;
+    color: #3E342E;
+}
+
+.card-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.text-container-center {
+    text-align: center;
+    background-color: #C9C8B9;
+    color: #3E342E;
+    margin-top: 2rem;
+}
+
+.text-container-center a {
+    color: #3E342E;
+    font-size: 1.5rem;
+}
+
+.text-container-center a:hover {
+    color:#6B705C;
+    text-decoration: underline;
+}

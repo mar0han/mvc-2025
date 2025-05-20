@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Session{% endblock %}
+
+{% block body %}
+    <div class="main">
+        <h1>Sessionens innehåll</h1>
+        <b></b><a href="{{ path('session_delete') }}"><b>Radera sessionen</b></a><br>
+
+        {% for key, value in session %}
+            <p><strong>{{ key }}:</strong> {{ dump(value) }}</p>
+        {% else %}
+            <p>Sessionen är tom.</p>
+        {% endfor %}
+        {{ include('flash.html.twig') }}
+    </div>
+{% endblock %}
